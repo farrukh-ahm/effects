@@ -96,3 +96,92 @@ body {background-color: #28282B;
                   transition: opacity 0.5s ease-in;
                   transition-delay: 0.5s; 
 }
+
+                                                        /*--------- ROTATING ELEMENTS -------------*/
+
+#rotation {height: 40.625rem;
+           width: 80%;
+           /* display: flex;
+           justify-content: center; */
+           margin: 20px auto;
+           /* background-color: #fff5c4; */
+           position: relative;
+}
+
+.outer-circle {height: 28.125rem;
+               width: 28.125rem;
+               border: 1px dashed black;
+               border-radius: 50%;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               /* z-index: -3; */
+               animation: outer-rotation 30s linear infinite;
+               /* background-color: red; */
+}
+.inner-circle {height: 21.875rem;
+        width: 21.875rem;
+        border: 1px dotted blue;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        animation: inner-rotation 100s linear infinite;
+        /* background-color: red; */
+}
+
+.core {height: 15.625rem;
+        width: 15.625rem;
+        border: 2px solid purple;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        animation: core-anime 1s linear alternate infinite;
+        background-color: red;
+}
+
+
+/* .outer-circle:hover {transform: translate(-50%, -50%) rotate(180deg);} */
+@keyframes outer-rotation {
+        0% {transform: translate(-50%, -50%) rotate(0);
+               
+        }
+        50% {transform: translate(-50%, -50%) rotate(180deg);
+                
+        }
+        100% {transform: translate(-50%, -50%) rotate(360deg);
+               
+        }
+}
+
+@keyframes inner-rotation {
+        0% {transform: translate(-50%, -50%) rotate(0);
+               
+        }
+        50% {transform: translate(-50%, -50%) rotate(-180deg);
+                
+        }
+        100% {transform: translate(-50%, -50%) rotate(-360deg);
+               
+        }
+}
+
+@keyframes core-anime {
+        0% {border: 2px solid purple;}
+        50% {border: 8px solid purple;}
+        100% {border: 12px solid purple;}
+}
+
+.outer-circle:hover, .inner-circle:hover {animation-play-state: paused;}
+
+#rotation > p {position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+}
