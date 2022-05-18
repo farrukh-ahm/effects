@@ -20,7 +20,7 @@ body {background-color: #28282B;
         width: 9.375rem;
         /* flex: 1; */
         margin: auto;
-        border: 1px solid gold;
+        border: 1px solid #f9f871;
         border-radius: 10px;
         overflow: hidden;
         position: relative;
@@ -53,7 +53,7 @@ body {background-color: #28282B;
 }*/
 .slide > h2 {font-size: 200%;
              width: 20rem;
-             color: royalblue;
+             color: #dc8273;
              text-align: center;
              position: absolute;
              left: 50%;
@@ -71,10 +71,9 @@ body {background-color: #28282B;
                         /* transition: opacity 0.5s ease-in; */
                         /* transition-delay: 0.6s; */
 }
-.slide > h3 {color: aquamarine;}
-.slide > p {color: #fff5c4}
+.slide > h3 {color: #dc8273;}
+.slide > p {color: #edeeff}
 .slide:hover{width: 25rem;
-            text-align: left;
 }
 
 .slide:hover > h2 {opacity: 0;
@@ -87,14 +86,17 @@ body {background-color: #28282B;
                    opacity: 1;
                    transition: opacity 0.5s ease-in;
                    transition-delay: 0.5s; 
+                   text-align: center;
 }
-.slide:hover > p {padding: 6px;
+.slide:hover > p {padding: 8px;
                   opacity: 1;
                   position: absolute;
                   left: 1px;
                   top: 7%;
                   transition: opacity 0.5s ease-in;
-                  transition-delay: 0.5s; 
+                  transition-delay: 0.5s;
+                  text-align: justify;
+                  line-height: 30px; 
 }
 
                                                         /*--------- ROTATING ELEMENTS -------------*/
@@ -110,41 +112,52 @@ body {background-color: #28282B;
 
 .outer-circle {height: 28.125rem;
                width: 28.125rem;
-               border: 1px dashed black;
+               border: 1px dashed #dc8273;
                border-radius: 50%;
                position: absolute;
                top: 50%;
                left: 50%;
                transform: translate(-50%, -50%);
                /* z-index: -3; */
-               animation: outer-rotation 30s linear infinite;
+               animation: outer-rotation 60s linear infinite;
                /* background-color: red; */
 }
 .inner-circle {height: 21.875rem;
         width: 21.875rem;
-        border: 1px dotted blue;
+        border: 1px dotted #f9f871;
         border-radius: 50%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
-        animation: inner-rotation 100s linear infinite;
+        animation: inner-rotation 120s linear infinite;
         /* background-color: red; */
 }
 
 .core {height: 15.625rem;
         width: 15.625rem;
-        border: 2px solid purple;
+        /* border: 2px solid purple; */
+        box-shadow: 0 0 8px rgb(225, 188, 209, 0.5);
         border-radius: 50%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
-        animation: core-anime 1s linear alternate infinite;
-        background-color: red;
+        animation: core-anime 2s linear alternate infinite;
+        background-color: #8c7e8e;
 }
+/* .core::after {content: "";
+               height: 16rem;
+               width: 16rem;;
+               position: absolute;
+               left: 0;
+               top: 0;
+               z-index: -999;
+               border-radius: 50%;
+               background-color: #fff5c4;
+} */
 
 
 /* .outer-circle:hover {transform: translate(-50%, -50%) rotate(180deg);} */
@@ -173,9 +186,9 @@ body {background-color: #28282B;
 }
 
 @keyframes core-anime {
-        0% {border: 2px solid purple;}
-        50% {border: 8px solid purple;}
-        100% {border: 12px solid purple;}
+        0% {box-shadow: 0 0 8px rgb(225, 188, 209, 0.5);}
+        50% {box-shadow: 0 0 12px rgb(225, 188, 209, 0.5);}
+        100% {box-shadow: 0 0 16px rgb(225, 188, 209, 0.5);}
 }
 
 .outer-circle:hover, .inner-circle:hover {animation-play-state: paused;}
