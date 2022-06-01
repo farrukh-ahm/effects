@@ -142,7 +142,7 @@ body {background-color: #28282B;
 .core {height: 15.625rem;
         width: 15.625rem;
         /* border: 2px solid purple; */
-        box-shadow: 0 0 0 8px rgb(225, 188, 209, 0.5);
+        box-shadow: 0 0 12px #FF0000;
         border-radius: 50%;
         position: absolute;
         top: 50%;
@@ -150,7 +150,7 @@ body {background-color: #28282B;
         transform: translate(-50%, -50%);
         z-index: 1;
         animation: core-anime 2s linear alternate infinite;
-        background-color: #8c7e8e;
+        background-color: #F2EA02;
 }
 /* .core::after {content: "";
                height: 16rem;
@@ -190,9 +190,9 @@ body {background-color: #28282B;
 }
 
 @keyframes core-anime {
-        0% {box-shadow: 0 0 0 8px rgb(225, 188, 209, 0.3);}
-        50% {box-shadow: 0 0 0 12px rgb(225, 188, 209, 0.3);}
-        100% {box-shadow: 0 0 0 16px rgb(225, 188, 209, 0.3);}
+        0% {box-shadow: 0 0 12px #FF0000;}
+        50% {box-shadow: 0 0 16px #FF0000;}
+        100% {box-shadow: 0 0 20px #FF0000;}
 }
 
 .outer-circle:hover, .inner-circle:hover {animation-play-state: paused;}
@@ -315,3 +315,28 @@ body {background-color: #28282B;
         0% {transform: scale(1, 0)}
         100% {transform: scale(1, 1)}
 }
+
+                                                /* ---------- LOADING -------------- */
+
+/* #loading-box {height: 28.125rem;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+}
+
+#half-rotation {height: 80%;
+                width: 400px;
+                position: relative;
+                background-color: #8c7e8e;
+}
+
+#outer-rotation {height: 250px;
+                 width: 250px;
+                 position: absolute;
+                 top: 50%;
+                 left: 50%;
+                 transform: translate(-50%, -50%);
+                 border-radius: 50%;
+                 box-shadow: 0 0 10px #f9f871; */
+                 /* box-shadow: 0 -10px #f9f871; */
+                 /* background-color: #dc8273; */
