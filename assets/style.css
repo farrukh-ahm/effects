@@ -278,3 +278,40 @@ body {background-color: #28282B;
 #card:hover>p, #card:hover>h3 {opacity: 1;
                                 transition-delay: 0.5s;
 }
+
+
+                                /* -------------- TEXT ANIME ------------ */
+
+#text-anime-box {width: 100%;
+                height: 28.125rem;
+                position: relative;
+                /* background-color: #dc8273; */
+}
+
+#text-anime-box > h1 {position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%) scale(1, 1);
+                      font-size: 500%;
+                      color: white
+}
+
+.effects::before {content:"";
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  border-top: 1px solid #f9f871;
+                  border-bottom: 1px solid #f9f871;
+                  /* transform: translateY(-50%); */
+                  transform: scale(1, 0);
+                  background-color: #28282B;
+                  /* transition: transform 1s ease-in-out; */
+                  animation: hide 1.5s linear alternate infinite;
+}
+
+@keyframes hide {
+        0% {transform: scale(1, 0)}
+        100% {transform: scale(1, 1)}
+}
