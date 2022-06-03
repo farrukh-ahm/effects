@@ -318,25 +318,50 @@ body {background-color: #28282B;
 
                                                 /* ---------- LOADING -------------- */
 
-/* #loading-box {height: 28.125rem;
+#loading-box {height: 28.125rem;
               width: 100%;
+              position: relative;
               display: flex;
               justify-content: center;
 }
 
-#half-rotation {height: 80%;
-                width: 400px;
-                position: relative;
-                background-color: #8c7e8e;
+#outer-rotation {height: 15.625rem;
+                 width: 15.625rem;
+                 border-radius: 50%;
+                 /* display: flex;
+                 justify-content: center; */
+                 position: relative;
+                 border-top: 20px solid #F2EA02;
+                 border-bottom: 20px solid greenyellow;
+                 border-left: 20px solid #28282B;
+                 border-right: 20px solid #28282B;
+                 /* transform: rotate(0) scale(1); */
+                 animation: outer-loader 2.5s linear alternate infinite;
 }
 
-#outer-rotation {height: 250px;
-                 width: 250px;
+#inner-rotation {height: 90%;
+                 width: 90%;
+                 border-radius: 50%;
+                 margin: auto;
                  position: absolute;
                  top: 50%;
                  left: 50%;
                  transform: translate(-50%, -50%);
-                 border-radius: 50%;
-                 box-shadow: 0 0 10px #f9f871; */
-                 /* box-shadow: 0 -10px #f9f871; */
-                 /* background-color: #dc8273; */
+                 border-top: 15px solid #28282B;
+                 border-bottom: 15px solid #28282B;
+                 border-left: 15px solid #edeeff;
+                 border-right: 15px solid #dc8273;
+                 animation: inner-loader 1.25s linear alternate infinite; 
+}
+
+@keyframes outer-loader {
+        0%{transform: rotate(0) scale(1);}
+        50%{transform: rotate(360deg) scale(0.8);}
+        100%{transform: rotate(720deg) scale(0.6);}
+}
+
+@keyframes inner-loader {
+        0%{transform: translate(-50%, -50%) rotate(0) scale(1);}
+        50%{transform: translate(-50%, -50%) rotate(-360deg) scale(0.8);}
+        100%{transform: translate(-50%, -50%) rotate(-720deg) scale(0.6);}
+}
