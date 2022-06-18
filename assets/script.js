@@ -1,3 +1,4 @@
+// ------------- BUBBLE EFFECTS ------------------------
 let buttons = document.getElementsByClassName("btns");
 let button = ""
 for(button of buttons){
@@ -13,3 +14,16 @@ for(button of buttons){
         })
     });
 }
+
+// --------- MODAL ELEMENTS --------------------------------
+let modal = document.querySelector(".modal");
+let openButton = document.querySelector(".border-button");
+let closeButton = document.querySelector(".close-modal")
+openButton.addEventListener("click", function(){
+    modal.showModal();
+    console.log("click")
+})
+
+closeButton.addEventListener("click", function(){
+    modal.close()
+})

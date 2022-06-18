@@ -472,3 +472,19 @@ body {background-color: #28282B;
              top: -10px;
              right: 170px};
 } */
+
+.modal {max-width: 300px;
+        color: #dc8273;
+        margin: auto;
+        border: 0;
+        box-shadow: 0 0 5px #fff;
+        padding: 20px
+}
+
+.close-modal{margin: 10px auto;
+             padding: 0 5px;
+}
+
+.modal::backdrop{background: linear-gradient(to right top, #f9ebf3, #ffe3e9, #ffddd3, #ffdcb7, #ffe19f, #f9e396, #f1e58d, #e7e786, #eae282, #eddd7e, #f0d77b, #f2d279);
+                opacity: 0.4;
+}
