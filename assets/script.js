@@ -27,3 +27,15 @@ openButton.addEventListener("click", function(){
 closeButton.addEventListener("click", function(){
     modal.close()
 })
+
+
+// --------- OPTIONS BUBBLES --------------------------------
+let bubbleContainer = document.querySelector("#bubble-wrapper");
+let index = document.querySelector(".index-btn");
+let tweetBtn = document.querySelector(".tweet-btn");
+let fbBtn = document.querySelector(".fb-btn");
+let instaBtn = document.querySelector(".insta-btn");
+
+index.addEventListener("click", function(){
+    bubbleContainer.classList.toggle("bubble-toggle")
+})
