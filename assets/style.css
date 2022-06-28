@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Rubik+Moonrocks&display=swap');
+
 * {margin: 0;
    padding: 0;
    box-sizing: border-box;
@@ -129,7 +131,7 @@ body {background-color: #28282B;
 }
 .inner-circle {height: 21.875rem;
         width: 21.875rem;
-        border: 1px dotted #f9f871;
+        border: 1px dashed #f9f871;
         border-radius: 50%;
         position: absolute;
         top: 50%;
@@ -151,7 +153,7 @@ body {background-color: #28282B;
         transform: translate(-50%, -50%);
         z-index: 1;
         animation: core-anime 2s linear alternate infinite;
-        background-color: #F2EA02;
+        background-color: #f1ee7d;
 }
 /* .core::after {content: "";
                height: 16rem;
@@ -192,8 +194,10 @@ body {background-color: #28282B;
 
 @keyframes core-anime {
         0% {box-shadow: 0 0 12px #FF0000;}
-        50% {box-shadow: 0 0 16px #FF0000;}
-        100% {box-shadow: 0 0 20px #FF0000;}
+        25% {box-shadow: 0 0 18px #FF0000;}
+        50% {box-shadow: 0 0 24px #FF0000;}
+        75% {box-shadow: 0 0 30px #FF0000;}
+        100% {box-shadow: 0 0 36px #FF0000;}
 }
 
 .outer-circle:hover, .inner-circle:hover {animation-play-state: paused;}
@@ -250,7 +254,7 @@ body {background-color: #28282B;
         transition: all 1s ease-in-out;
 }
 #card > h3 {position: absolute;
-            top: 20%;
+            top: 10%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 150%;
@@ -436,6 +440,7 @@ body {background-color: #28282B;
                background: transparent;
                position: relative;
                transition: box-shadow 0.2s;
+               cursor: pointer;
 }
 
 .border-button::before, .border-button:after {content: "";
@@ -484,6 +489,7 @@ body {background-color: #28282B;
 
 .close-modal{margin: 10px auto;
              padding: 0 5px;
+             cursor: pointer;
 }
 
 .modal::backdrop{background: linear-gradient(to right top, #f9ebf3, #ffe3e9, #ffddd3, #ffdcb7, #ffe19f, #f9e396, #f1e58d, #e7e786, #eae282, #eddd7e, #f0d77b, #f2d279);
@@ -594,3 +600,83 @@ body {background-color: #28282B;
 .bubble-toggle > .tweet-btn:hover{box-shadow: 0 0 5px #89F3FF;}
 .bubble-toggle > .fb-btn:hover{box-shadow: 0 0 5px #A22FE0;}
 .bubble-toggle > .insta-btn:hover{box-shadow: 0 0 5px #FA4A62;}
+
+                                                /* -------------- GLITCH ----------------- */
+
+#glitch-container{
+        width: 100%;
+        height: 15.652rem;
+        position: relative;
+        margin-top: 100px;          
+}
+
+.glitch-text{
+        font-family: 'Rubik Moonrocks', cursive;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 10rem;
+        color: #edeeff;
+        text-shadow: 
+        0.05em 0 0 rgba(255,0,0,0.7),
+        -0.025em -0.05em 0 rgba(0,255,0,0.7),
+        0.025em 0.05em 0 rgba(0,0,255,0.7);
+        animation: glitch 750ms infinite;
+}
+
+.top {clip-path: polygon(0 0, 100% 0, 100% 48%, 0 48%);
+        /* position: absolute;
+        top: 50%;
+        left: 50%; */
+        transform: translate(-49.8%, -50%);
+        z-index: 2;
+      animation: glitch 700ms infinite;
+}
+
+.bottom {clip-path: polygon(0 48%, 100% 48%, 100% 100%, 0 100%);
+        /* position: absolute;
+        top: 50%;
+        left: 50%; */
+        transform: translate(-49%, -50%);
+        z-index: 0;
+        animation: glitch 650ms infinite;
+}
+
+@keyframes glitch {
+        0% {
+                text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                  -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                  -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+              }
+              14% {
+                text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                  -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                  -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+              }
+              15% {
+                text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                  0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                  -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+              }
+              49% {
+                text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                  0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                  -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+              }
+              50% {
+                text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                  0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+              }
+              99% {
+                text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                  0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+              }
+              100% {
+                text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+                  -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+                  -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+              }
+            }
+}
