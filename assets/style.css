@@ -911,6 +911,7 @@ body {background-color: #28282B;
         /* background-color: #A22FE0; */
 
         .profile-card-inner{
+                cursor: pointer;
                 /* inline-size: 20em; */
                 block-size: 95%;
                 aspect-ratio: 0.75;
@@ -1016,4 +1017,46 @@ body {background-color: #28282B;
         }
 
 
+}
+
+.profile-card-click{
+
+        position: relative;
+
+        .profile-card-socials{
+
+                .profile-social-links{
+                        opacity: 1 !important;
+
+                }
+        }
+
+        .profile-card-pic{
+
+                position: absolute;
+                top: -27% !important;
+                left: 0;
+                /* inline-size: 100%;
+                block-size: 100%; */
+        }
+
+        .profile-card-pic::before{
+                content: '';
+                position: absolute;
+                top:0;
+                left: 0;
+                inline-size: 100%;
+                block-size: 100%;
+                backdrop-filter: blur(5px);
+                /* background-color: #28282B; */
+                z-index: 99;
+        }
+
+
+}
+
+.profile-card-click > .profile-card-pic {
+        position: absolute;
+                top: -27%;
+                left: 0;       
 }

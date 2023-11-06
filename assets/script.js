@@ -39,3 +39,13 @@ let instaBtn = document.querySelector(".insta-btn");
 index.addEventListener("click", function(){
     bubbleContainer.classList.toggle("bubble-toggle")
 })
+
+
+
+// --------- PROFILE CARD --------------------------------
+let profileCard = document.querySelector(".profile-card-inner")
+
+profileCard.addEventListener("click", ()=>{
+    console.log("click")
+    profileCard.classList.toggle("profile-card-click")
+})
