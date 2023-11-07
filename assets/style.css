@@ -920,6 +920,7 @@ body {background-color: #28282B;
                 border-radius: 8px;
                 overflow-y: hidden;
                 position: relative;
+                /* pointer-events: none; */
                 /* background-color: #28282B; */
 
                 .profile-name-plate{
@@ -1059,4 +1060,58 @@ body {background-color: #28282B;
         position: absolute;
                 top: -27%;
                 left: 0;       
+}
+
+/* ------------------------------------------ TYPING EFFECT ---------------------------------- */
+
+.typing-container{
+
+        inline-size: 100%;
+        block-size: 25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: #59224B; */
+
+        .typing-texts{
+                color: #fff;
+                font-size: 8rem;
+                /* position: relative; */
+                
+        }
+
+        span{
+
+                color: #EB59C7;
+                position: relative;
+                margin-inline-start: 10px;
+        }
+
+        span::before{
+
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: -8px;
+                height: 80%;
+                inline-size: 2px;
+                transform: translateY(-50%);
+                background-color: #89F3FF;
+                animation: blink 0.7s ease-in-out infinite;
+
+                }
+
+        .stop-blink::before{
+                animation: none;
+        }
+
+}
+
+
+@keyframes blink {
+
+        50%{
+                opacity: 0;
+        }
+
 }
