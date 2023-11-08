@@ -1071,6 +1071,7 @@ body {background-color: #28282B;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: sans-serif;
         /* background-color: #59224B; */
 
         .typing-texts{
@@ -1114,4 +1115,85 @@ body {background-color: #28282B;
                 opacity: 0;
         }
 
+}
+
+/* ------------------------------------------ TYPING EFFECT WITH ONLY CSS ---------------------------------- */
+
+.typing-container2{
+
+        inline-size: 100%;
+        block-size: 25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: monospace !important;
+        /* background-color: #59224B; */
+
+
+        h2{
+
+                font-size: 4rem;
+                font-weight: lighter;
+                /* font-family: sans-serif !important; */
+                color: #fff;
+                overflow: hidden;
+                position: relative;
+
+        }
+
+        h2::before, h2::after{
+
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+
+        }
+
+        h2::before{
+                
+                inline-size: 100%;
+                block-size: 100%;
+                background-color: #28282B;
+                /* border-left: 1px solid #89F3FF; */
+                animation: typing 5s steps(32) infinite;
+                /* z-index: -1; */
+
+        }
+
+        h2::after{
+
+                inline-size: 0.125em;
+                block-size: 100%;
+                background-color: #59224B;
+                animation: typing 5s steps(32) infinite,
+                                cursor-blink 750ms steps(32) infinite;
+        }
+
+
+
+
+}
+
+@keyframes typing{
+
+        /* 0%{
+                position: absolute;
+                top: 0;
+                right: 0;
+        } */
+
+        100%{
+                /* position: absolute;
+                top: 0; */
+                left: 100%;
+                /* inline-size: 0; */
+        }
+
+}
+
+@keyframes cursor-blink{
+        100%{
+                background-color: transparent;
+        }
 }
