@@ -110,107 +110,6 @@ body {background-color: #28282B;
                   line-height: 30px; 
 }
 
-                                                        /*--------- ROTATING ELEMENTS -------------*/
-
-#rotation {height: 40.625rem;
-           width: 80%;
-           /* display: flex;
-           justify-content: center; */
-           margin: 20px auto;
-           /* background-color: #fff5c4; */
-           position: relative;
-}
-
-.outer-circle {height: 28.125rem;
-               width: 28.125rem;
-               border: 1px dashed #dc8273;
-               border-radius: 50%;
-               position: absolute;
-               top: 50%;
-               left: 50%;
-               transform: translate(-50%, -50%);
-               /* z-index: -3; */
-               animation: outer-rotation 60s linear infinite;
-               /* background-color: red; */
-}
-.inner-circle {height: 21.875rem;
-        width: 21.875rem;
-        border: 1px dashed #f9f871;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        animation: inner-rotation 120s linear infinite;
-        /* background-color: red; */
-}
-
-.core {height: 15.625rem;
-        width: 15.625rem;
-        /* border: 2px solid purple; */
-        box-shadow: 0 0 12px #FF0000;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        animation: core-anime 2s linear alternate infinite;
-        background-color: #f1ee7d;
-}
-/* .core::after {content: "";
-               height: 16rem;
-               width: 16rem;;
-               position: absolute;
-               left: 0;
-               top: 0;
-               z-index: -999;
-               border-radius: 50%;
-               background-color: #fff5c4;
-} */
-
-
-/* .outer-circle:hover {transform: translate(-50%, -50%) rotate(180deg);} */
-@keyframes outer-rotation {
-        0% {transform: translate(-50%, -50%) rotate(0);
-               
-        }
-        50% {transform: translate(-50%, -50%) rotate(180deg);
-                
-        }
-        100% {transform: translate(-50%, -50%) rotate(360deg);
-               
-        }
-}
-
-@keyframes inner-rotation {
-        0% {transform: translate(-50%, -50%) rotate(0);
-               
-        }
-        50% {transform: translate(-50%, -50%) rotate(-180deg);
-                
-        }
-        100% {transform: translate(-50%, -50%) rotate(-360deg);
-               
-        }
-}
-
-@keyframes core-anime {
-        0% {box-shadow: 0 0 12px #FF0000;}
-        25% {box-shadow: 0 0 18px #FF0000;}
-        50% {box-shadow: 0 0 24px #FF0000;}
-        75% {box-shadow: 0 0 30px #FF0000;}
-        100% {box-shadow: 0 0 36px #FF0000;}
-}
-
-.outer-circle:hover, .inner-circle:hover {animation-play-state: paused;}
-
-#rotation > p {position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-}
 
                                                 /*--------------- CARD SECTION ----------------------*/
 
@@ -289,41 +188,6 @@ body {background-color: #28282B;
 }
 
 
-                                /* -------------- TEXT ANIME ------------ */
-
-#text-anime-box {width: 100%;
-                height: 28.125rem;
-                position: relative;
-                /* background-color: #dc8273; */
-}
-
-#text-anime-box > h1 {position: absolute;
-                      top: 50%;
-                      left: 50%;
-                      transform: translate(-50%, -50%) scale(1, 1);
-                      font-size: 500%;
-                      color: white
-}
-
-.effects::before {content:"";
-                  width: 100%;
-                  height: 100%;
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  border-top: 1px solid #f9f871;
-                  border-bottom: 1px solid #f9f871;
-                  /* transform: translateY(-50%); */
-                  transform: scale(1, 0);
-                  background-color: #28282B;
-                  /* transition: transform 1s ease-in-out; */
-                  animation: hide 1.5s linear alternate infinite;
-}
-
-@keyframes hide {
-        0% {transform: scale(1, 0)}
-        100% {transform: scale(1, 1)}
-}
 
                                                 /* ---------- LOADING -------------- */
 
@@ -466,11 +330,16 @@ body {background-color: #28282B;
 }
 
 .border-button:hover{border: 5px solid #D3FEC6;
-                     box-shadow: 0 0 15px #ECFFC7;}
+                     /* box-shadow: 0 0 15px #ECFFC7; */
+                }
 
-.border-button:hover::before{right: 170px;}
+.border-button:hover::before{
+        right: 170px;
+}
 
-.border-button:hover::after{left: 170px;}
+.border-button:hover::after{
+        left: 170px;
+}
 
 /* .border-button:hover::before {animation: top-hover 0.5s forwards;
 }
@@ -600,10 +469,10 @@ body {background-color: #28282B;
         z-index: 1;
 }
 
-.index-btn:hover {box-shadow: 0 0 5px #D3FEC6;}
-.bubble-toggle > .tweet-btn:hover{box-shadow: 0 0 5px #89F3FF;}
-.bubble-toggle > .fb-btn:hover{box-shadow: 0 0 5px #A22FE0;}
-.bubble-toggle > .insta-btn:hover{box-shadow: 0 0 5px #FA4A62;}
+.index-btn:hover {box-shadow: 0 0 5px #D3FEC6, 0 0 3px #D3FEC6 inset;}
+.bubble-toggle > .tweet-btn:hover{box-shadow: 0 0 5px #89F3FF, 0 0 3px #89F3FF inset;}
+.bubble-toggle > .fb-btn:hover{box-shadow: 0 0 5px #A22FE0, 0 0 3px #A22FE0 inset;}
+.bubble-toggle > .insta-btn:hover{box-shadow: 0 0 5px #FA4A62, 0 0 3px #FA4A62 inset;}
 
                                                 /* -------------- GLITCH ----------------- */
 
