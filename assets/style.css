@@ -1066,3 +1066,78 @@ body {background-color: #28282B;
                 background-color: transparent;
         }
 }
+
+
+
+/* ------------------------------------------ TYPING EFFECT WITH DIFFERENT TEXTS WITH ONLY CSS ---------------------------------- */
+
+.typing-container3 {
+
+        inline-size: 100%;
+        block-size: 25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: monospace;
+        /* background-color: #89F3FF; */
+
+        .text-lists{
+                
+                block-size: 3.8rem;
+                list-style-type: none;
+                color: #fff;
+                font-size: 4em;
+                overflow-y: hidden;
+                height: 90px;
+                line-height: 90px;
+                
+                li{
+                        position: relative;
+                        overflow: hidden;
+                        top: 0;
+                        animation: text-slide 9s steps(3) infinite;
+                }
+
+                li::before{
+
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                }
+
+                li::before{
+
+                        inline-size: 100%;
+                        block-size: 90px;
+                        background-color: #28282B;
+                        border-left: 2px solid #FC6D6D;
+                        animation: text-typing 3s steps(21) infinite; 
+
+                }
+
+
+        }
+
+
+}
+
+@keyframes text-typing{
+
+        40%, 60%{
+                left: calc(100% + 30px);
+              }
+              100%{
+                left: 0;
+              }
+
+}
+
+@keyframes text-slide {
+        
+        to{
+                top: -270px;
+        }
+
+}
