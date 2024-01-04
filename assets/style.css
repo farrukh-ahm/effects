@@ -9,7 +9,7 @@
         box-sizing: border-box;
 }
 
-body {background-color: #28282B;
+body {background-color: #28282B;;
 }
 
 :root {--font: #edeeff;
@@ -1141,3 +1141,170 @@ body {background-color: #28282B;
         }
 
 }
+
+/* ------------------------------------------ 3D CARD ---------------------------------- */
+
+.three-d-card-container {
+
+        block-size: 30rem;
+        inline-size: 100%;
+        display: grid;
+        place-items: center;
+        /* background-color: #89F3FF; */
+        perspective: 800px;
+
+}
+
+.three-card{
+
+        block-size: 90%;
+        inline-size: 18em;
+        border: 1px solid hotpink;
+        border-radius: 8px;
+        box-shadow: 0 0 5px hotpink;
+        /* transform: translateZ(50px); */
+        /* rotate: y 80deg; */
+        transition: all 0.5s linear;
+        position: relative;
+
+        .front-face{
+
+                position: absolute;
+                inset: 0;
+                background-color: #28282B;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2em;       
+                border-radius: 8px;
+                transform: translateZ(100px);
+
+                .img-container-threeD{
+
+                        block-size: 10em;
+                        inline-size: 10em;
+        
+                        img{
+                                inline-size: 100%;
+                                block-size: 100%;
+                                filter: drop-shadow(0 0 5px hotpink);
+                                transform: translateZ(100px);
+                                transition: all 0.5s linear;
+                                /* z-index: 99; */
+                        }
+        
+                }
+
+                h2{     
+                        
+                        font-size: 4em;
+                        background-image: linear-gradient(to right, purple, rgb(173, 75, 244), rgb(208, 163, 245));
+                        color: transparent;
+                        background-clip: text;
+                        translate: z 100px;
+                        transition: all 0.5s linear;
+                        /* filter: drop-shadow(0 0 3px grey); */
+                }
+
+        }
+
+        .card-back {
+
+                position: absolute;
+                inset: 0;
+                background-color: white;
+                transform: translateZ(-200px);
+        }
+
+        &:hover{
+                rotate: y -15deg;
+                box-shadow: 0 0 8px 5px hotpink;
+
+                .front-face{
+                        box-shadow: 0 0 5px hotpink inset;
+                }
+        }
+
+        &:hover > .front-face > .img-container-threeD::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        inline-size: 4em;
+                        block-size: 4em;
+                        transform: translate(-50%, -50%);
+                        border-radius: 50%;
+                        /* scale: 0.4; */
+                        background-color: rgba(192, 192, 192, 0.2);
+                        filter: blur(1em);
+                        animation: shadow 0.5s linear;
+        }
+
+        &:hover > .front-face .img-container-threeD> img{
+                rotate: y -15deg;
+        }
+
+        &:hover > .front-face h2{
+                translate: z 500px;
+                text-shadow: 10px 10px rgba(192, 192, 192, 0.2);
+
+        }
+
+        /* .card-back{
+                position: absolute;
+                top: 0;
+                left: 0;
+                inline-size: 100%;
+                block-size: 100%;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: translateZ(-100px);
+
+        } */
+
+}
+
+@keyframes shadow {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+}
+
+/* .test-container{
+        block-size: 90%;
+        inline-size: 10rem;
+        background-color: blueviolet;
+        position: relative;
+        transform: rotateY(-80deg);
+}
+
+.box{
+        position: absolute;
+        inset: 0;
+        opacity: 0.6;
+        
+        &:nth-child(1){
+                transform: translateZ(100px);
+                background-color: yellow;
+        }
+
+        &:nth-child(2){
+                transform: translateZ(-100px);
+                background-color: #89F3FF;
+        }
+}
+
+.front-test{
+        position: absolute;
+        inset: 0;
+        background-color: yellow;
+        transform: translateZ(100px);
+}
+.back-test{
+        position: absolute;
+        inset: 0;
+        background-color: red;
+        transform: translateZ(-500px);
+} */
