@@ -101,3 +101,13 @@ const typingEffect = () => {
 }
 
 typingEffect()
+
+
+
+let cardD = document.querySelector(".card-d-container");
+
+cardD.addEventListener("click", ()=>{
+
+    cardD.classList.toggle("rotate")
+
+})
