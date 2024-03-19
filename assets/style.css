@@ -1386,30 +1386,31 @@ body {background-color: #28282B;;
         min-block-size: 500px;
         display: grid;
         place-content: center;
-        background-color: #59224B;
+        /* background-color: #59224B; */
 
 }
 
 .logo-container{
 
-        inline-size: 50rem;
-        min-block-size: 3em;
+        width: 50rem;
+        min-height: 3em;
         overflow: hidden;
-        background-color: #fff;
+        background-color: rgba(255,255,255,0.7);
         position: relative;
-
+        white-space: nowrap;
+        -webkit-mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+        mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
 }
 
 .logo-box{
-        /* inline-size: 100%;
-        block-size: 2.75em; */
-        white-space: nowrap;
+        inline-size: max-content;
+        /* block-size: 2.75em; */
         display: inline-block;
-        animation: logo-scroll 10s linear infinite;
+        animation: logo-scroll 15s linear infinite;
         /* background-color: #fff; */
 
         img{
-                block-size: 2.75em;
+                height: 2.75em;
                 padding: 0.5em;
         }
 }
@@ -1419,5 +1420,3 @@ body {background-color: #28282B;;
                 transform: translateX(-100%);
         }
 }
-
-    

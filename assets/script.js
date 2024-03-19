@@ -113,3 +113,6 @@ cardD.addEventListener("click", ()=>{
 })
 
 // --------- LOGO SLIDE --------------------------------
+const logos = document.querySelector(".logo-box")
+let copy_logos = logos.cloneNode(true)
+document.querySelector(".logo-container").appendChild(copy_logos)
