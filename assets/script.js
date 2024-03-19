@@ -111,3 +111,5 @@ cardD.addEventListener("click", ()=>{
     cardD.classList.toggle("rotate")
 
 })
+
+// --------- LOGO SLIDE --------------------------------

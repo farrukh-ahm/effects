@@ -1376,3 +1376,48 @@ body {background-color: #28282B;;
     
         rotate: y 180deg;
     }
+
+
+    /* ------------------------------------------ LOGO SCROLL ---------------------------------- */
+
+.logo-container-box{
+
+        inline-size: 100%;
+        min-block-size: 500px;
+        display: grid;
+        place-content: center;
+        background-color: #59224B;
+
+}
+
+.logo-container{
+
+        inline-size: 50rem;
+        min-block-size: 3em;
+        overflow: hidden;
+        background-color: #fff;
+        position: relative;
+
+}
+
+.logo-box{
+        /* inline-size: 100%;
+        block-size: 2.75em; */
+        white-space: nowrap;
+        display: inline-block;
+        animation: logo-scroll 10s linear infinite;
+        /* background-color: #fff; */
+
+        img{
+                block-size: 2.75em;
+                padding: 0.5em;
+        }
+}
+
+@keyframes logo-scroll{
+        100%{
+                transform: translateX(-100%);
+        }
+}
+
+    
